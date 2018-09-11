@@ -1,0 +1,130 @@
+[
+    {
+        "Year": 2001,
+        "Types": {
+            "Property": 26961,
+            "Vechile": 27692,
+            "State": 621
+        }
+    },
+    {
+        "Year": 2002,
+        "Types": {
+            "Property": 26788,
+            "Vechile": 26714,
+            "State": 639
+        }
+    },
+    {
+        "Year": 2003,
+        "Types": {
+            "Property": 26551,
+            "Vechile": 24707,
+            "State": 587
+        }
+    },
+    {
+        "Year": 2004,
+        "Types": {
+            "Property": 24955,
+            "Vechile": 24447,
+            "State": 515
+        }
+    },
+    {
+        "Year": 2005,
+        "Types": {
+            "Property": 25546,
+            "Vechile": 24837,
+            "State": 457
+        }
+    },
+    {
+        "Year": 2006,
+        "Types": {
+            "Property": 25844,
+            "Vechile": 25323,
+            "State": 437
+        }
+    },
+    {
+        "Year": 2007,
+        "Types": {
+            "Property": 24205,
+            "Vechile": 23800,
+            "State": 354
+        }
+    },
+    {
+        "Year": 2008,
+        "Types": {
+            "Property": 24882,
+            "Vechile": 23150,
+            "State": 313
+        }
+    },
+    {
+        "Year": 2009,
+        "Types": {
+            "Property": 21759,
+            "Vechile": 20933,
+            "State": 259
+        }
+    },
+    {
+        "Year": 2010,
+        "Types": {
+            "Property": 18758,
+            "Vechile": 17964,
+            "State": 241
+        }
+    },
+    {
+        "Year": 2011,
+        "Types": {
+            "Property": 18304,
+            "Vechile": 18075,
+            "State": 227
+        }
+    },
+    {
+        "Year": 2012,
+        "Types": {
+            "Property": 17181,
+            "Vechile": 17025,
+            "State": 209
+        }
+    },
+    {
+        "Year": 2013,
+        "Types": {
+            "Property": 14574,
+            "Vechile": 14854,
+            "State": 186
+        }
+    },
+    {
+        "Year": 2014,
+        "Types": {
+            "Property": 12586,
+            "Vechile": 12779,
+            "State": 176
+        }
+    },
+    {
+        "Year": 2015,
+        "Types": {
+            "Property": 13527,
+            "Vechile": 13192,
+            "State": 153
+        }
+    },
+    {
+        "Year": 2016,
+        "Types": {
+            "Property": 4073,
+            "Vechile": 3989,
+            "State": 40
+        }
+    }
+]
