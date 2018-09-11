@@ -39,7 +39,8 @@ rl.on('close', ()=> {
     var iterator1 = myMap[Symbol.iterator]();
         for (let item of iterator1) {
             var prop = {};
-            prop[item[0]] = item[1];
+            prop['Type'] = item[0];
+            prop['Count'] = item[1];
             v.push(prop);
         }
         fs.writeFileSync('assignment3.json', JSON.stringify(v), (err) => {
