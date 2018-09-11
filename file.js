@@ -4,13 +4,13 @@ var fs = require('fs'),
 
 var instream = fs.createReadStream('Crimes_-_2001_to_present.csv');
 var outstream = new stream;
-outstream.readable = true;
-outstream.writable = true;
+// outstream.readable = true;
+// outstream.writable = true;
 
 var rl = readline.createInterface({
     input: instream,
     output: outstream,
-    terminal: false
+    //terminal: false
 });
 var rob = new Array(16);
 var burg = new Array(16);
@@ -18,23 +18,28 @@ var v =[];
 rob.fill(0);
 burg.fill(0);
 console.log(burg[5]);
-rl.on('line', function(line) {
-    if(line.search('ROBBERY')){
-        var s = line.split(",");
+var ln=0;
+rl.on('line', function(x) {
+    ln++;
+    if(x.search('ROBBERY')!=-1)
+    {   
+        
+        console.log(ln);
+        var s = x.split(",");
         var index;
         for(i = 0 ; i<s.length;i++){
             if(Number(s[i])>2000 && Number(s[i])<2017){
                 index=Number(s[i]);
+                console.log(s[i]);
                 break;
             }
         }
         index -= 2001;
         rob[index] +=1;
-
         console.log( "rob " +index+ "--------------" + "------" + rob[index] );
     }
-    if(line.search('BURGLARY')){
-        var s = line.split(",");
+     if(x.search('BURGLARY') != -1){
+        var s = x.split(",");
         var index;
         for(i = 0 ; i<s.length;i++){
             if(Number(s[i])>2000 && Number(s[i])<2017){
@@ -54,10 +59,10 @@ rl.on('close',()=>{
     
     for(i=0 ; i <burg.length;i++){
         var obj={
-            YEAR:"",
-            ROBBERY:0,
-            BURGLARY:0,
-        };
+        YEAR:"",
+        ROBBERY:0,
+        BURGLARY:0,
+         };
         var year = 2000 + i+1 ;
         obj.YEAR = year;
         obj.BURGLARY = burg[i];
