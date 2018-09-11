@@ -12,8 +12,9 @@ var rl = readline.createInterface({
     output: outstream,
     terminal: false
 });
-var rob = new Array(17);
-var burg = new Array(17);
+var rob = new Array(16);
+var burg = new Array(16);
+var v =[];
 rob.fill(0);
 burg.fill(0);
 console.log(burg[5]);
@@ -49,26 +50,22 @@ rl.on('line', function(line) {
 });
 rl.on('close',()=>{
     console.log("file ----- closed");
-    var v =[];
-    var obj={
-        Primary_Type:"ROBBERY",
-        Year:"",
-        frequency:0,
-    };
+    
+    
     for(i=0 ; i <burg.length;i++){
+        var obj={
+            YEAR:"",
+            ROBBERY:0,
+            BURGLARY:0,
+        };
         var year = 2000 + i+1 ;
-        obj.Year = year;
-        obj.frequency = burg[i];
+        obj.YEAR = year;
+        obj.BURGLARY = burg[i];
+        obj.ROBBERY=rob[i];
         v.push(obj);
         console.log(obj);
     }
-    obj.Primary_Type="BURGLARY";
-    for(i=0 ; i <rob.length;i++){
-        var year = 2000 + i+1;
-        obj.Year = year;
-        obj.frequency = rob[i];
-        v.push(obj);
-    }
+    console.log(v);
     fs.writeFileSync('1st.json' , JSON.stringify(v), (err)=> {
         if(err){
             console.log('file not found');
