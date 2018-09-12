@@ -1,15 +1,26 @@
 {
-  "name": "files",
+  "name": "Chicago_Crime",
   "version": "1.0.0",
   "description": "",
-  "main": "file.js",
-  "dependencies": {
-    "fast-csv": "^2.4.1"
-  },
-  "devDependencies": {},
+  "main": "Second.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint":"./node_modules/.bin/eslint ./**/*.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhabaranjan19966/Chicago_Crime.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bhabaranjan19966/Chicago_Crime/issues"
+  },
+  "homepage": "https://github.com/Bhabaranjan19966/Chicago_Crime#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
