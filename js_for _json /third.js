@@ -1,16 +1,11 @@
 const fs = require('fs');
-
-
 const readline = require('readline');
-
-
 const stream = require('stream');
 
-const instream = fs.createReadStream('Crimes_-_2001_to_present.csv');
+const instream = fs.createReadStream('../Crimes_-_2001_to_present.csv');
 const outstream = new stream();
 outstream.readable = true;
 outstream.writable = true;
-
 const rl = readline.createInterface({
   input: instream,
   output: outstream,
@@ -44,7 +39,7 @@ rl.on('close', () => {
     prop.Count = item[1];
     v.push(prop);
   }
-  fs.writeFileSync('assignment3.json', JSON.stringify(v), (err) => {
+  fs.writeFileSync('../json_output/assignment3.json', JSON.stringify(v), (err) => {
     if (err) {
       console.log('error while parsing');
     }

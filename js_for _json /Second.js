@@ -1,16 +1,11 @@
 const fs = require('fs');
-
-
 const readline = require('readline');
-
-
 const stream = require('stream');
 
-const instream = fs.createReadStream('Crimes_-_2001_to_present.csv');
+const instream = fs.createReadStream('../Crimes_-_2001_to_present.csv');
 const outstream = new stream();
 outstream.readable = true;
 outstream.writable = true;
-
 const rl = readline.createInterface({
   input: instream,
   output: outstream,
@@ -31,7 +26,7 @@ rl.on('line', (line) => {
     if (hasvechile.test(line)) {
       var index;
       var x = line.split(',');
-      for (i = 0; i < x.length; i++) {
+      for (let i = 0; i < x.length; i++) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -43,7 +38,7 @@ rl.on('line', (line) => {
     if (hasstate.test(line)) {
       var index;
       var x = line.split(',');
-      for (i = 0; i < x.length; i++) {
+      for (let i = 0; i < x.length; i++) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -55,7 +50,7 @@ rl.on('line', (line) => {
     if (hasprop.test(line)) {
       var index;
       var x = line.split(',');
-      for (i = 0; i < x.length; i++) {
+      for (let i = 0; i < x.length; i++) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -68,24 +63,21 @@ rl.on('line', (line) => {
 });
 rl.on('close', () => {
   const v = [];
-  for (i = 0; i < vechile.length; i++) {
+  for (let i = 0; i < vechile.length; i++) {
     const type = {
+      Year: '',
       Property: '',
       Vechile: '',
       State: '',
     };
-    const obj = {
-      Year: '',
-      Types: type,
-    };
+    type.Year = i + 2000 + 1;
     type.Property = property[i];
     type.State = stateup[i];
     type.Vechile = vechile[i];
-    obj.Year = 2000 + i + 1;
-    v.push(obj);
+    v.push(type);
     // console.log(obj);
   }
-  fs.writeFileSync('assignment2.json', JSON.stringify(v), (err) => {
-    console.log('error while writing');
+  fs.writeFileSync('../json_output/assignment2.json', JSON.stringify(v), (err) => {
+    if (err) console.log('error while writing');
   });
 });

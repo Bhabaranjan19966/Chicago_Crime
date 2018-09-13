@@ -1,0 +1,98 @@
+[
+    {
+        "Year": 2001,
+        "Property": 26961,
+        "Vechile": 27692,
+        "State": 621
+    },
+    {
+        "Year": 2002,
+        "Property": 26788,
+        "Vechile": 26714,
+        "State": 639
+    },
+    {
+        "Year": 2003,
+        "Property": 26551,
+        "Vechile": 24707,
+        "State": 587
+    },
+    {
+        "Year": 2004,
+        "Property": 24955,
+        "Vechile": 24447,
+        "State": 515
+    },
+    {
+        "Year": 2005,
+        "Property": 25546,
+        "Vechile": 24837,
+        "State": 457
+    },
+    {
+        "Year": 2006,
+        "Property": 25844,
+        "Vechile": 25323,
+        "State": 437
+    },
+    {
+        "Year": 2007,
+        "Property": 24205,
+        "Vechile": 23800,
+        "State": 354
+    },
+    {
+        "Year": 2008,
+        "Property": 24882,
+        "Vechile": 23150,
+        "State": 313
+    },
+    {
+        "Year": 2009,
+        "Property": 21759,
+        "Vechile": 20933,
+        "State": 259
+    },
+    {
+        "Year": 2010,
+        "Property": 18758,
+        "Vechile": 17964,
+        "State": 241
+    },
+    {
+        "Year": 2011,
+        "Property": 18304,
+        "Vechile": 18075,
+        "State": 227
+    },
+    {
+        "Year": 2012,
+        "Property": 17181,
+        "Vechile": 17025,
+        "State": 209
+    },
+    {
+        "Year": 2013,
+        "Property": 14574,
+        "Vechile": 14854,
+        "State": 186
+    },
+    {
+        "Year": 2014,
+        "Property": 12586,
+        "Vechile": 12779,
+        "State": 176
+    },
+    {
+        "Year": 2015,
+        "Property": 13527,
+        "Vechile": 13192,
+        "State": 153
+    },
+    {
+        "Year": 2016,
+        "Property": 4073,
+        "Vechile": 3989,
+        "State": 40
+    }
+]

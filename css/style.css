@@ -15,3 +15,29 @@
 .arc2 path {
   stroke: green;
 }
+body {
+  font: 10px sans-serif;
+  align-self: auto;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+.viz-portfolio-delinquent-status {
+  font-family: helvetica, arial, sans-serif; 
+  margin: 0 auto;
+  font-size: 10px;
+  width: 450px;
+  height: 300px;
+  padding-right: 400px;
+}
+
+
+path { fill: #83B0EA;}	
+.domain { 
+		fill: none; 
+		stroke: #000; 
+		stroke-width: 1px; 
+  } 
