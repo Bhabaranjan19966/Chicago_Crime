@@ -1,9 +1,9 @@
 const fs = require('fs');
 const readline = require('readline');
-const stream = require('stream');
+const Stream = require('stream');
 
 const instream = fs.createReadStream('../Crimes_-_2001_to_present.csv');
-const outstream = new stream();
+const outstream = new Stream();
 outstream.readable = true;
 outstream.writable = true;
 const rl = readline.createInterface({
@@ -22,11 +22,12 @@ const hasprop = /TO VEHICLE/;
 const hasstate = /TO STATE SUP PROP/;
 const has = /CRIMINAL DAMAGE/;
 rl.on('line', (line) => {
+  let index;
+  let x;
   if (has.test(line)) {
     if (hasvechile.test(line)) {
-      var index;
-      var x = line.split(',');
-      for (let i = 0; i < x.length; i++) {
+      x = line.split(',');
+      for (let i = 0; i < x.length; i += 1) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -36,9 +37,8 @@ rl.on('line', (line) => {
       // console.log(index+"     "+"vechile");
     }
     if (hasstate.test(line)) {
-      var index;
-      var x = line.split(',');
-      for (let i = 0; i < x.length; i++) {
+      x = line.split(',');
+      for (let i = 0; i < x.length; i += 1) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -48,9 +48,8 @@ rl.on('line', (line) => {
       // console.log(index+"     "+"state");
     }
     if (hasprop.test(line)) {
-      var index;
-      var x = line.split(',');
-      for (let i = 0; i < x.length; i++) {
+      x = line.split(',');
+      for (let i = 0; i < x.length; i += 1) {
         if (Number(x[i]) > 2000 && Number(x[i]) < 2017) {
           index = Number(x[i]);
           break;
@@ -63,7 +62,7 @@ rl.on('line', (line) => {
 });
 rl.on('close', () => {
   const v = [];
-  for (let i = 0; i < vechile.length; i++) {
+  for (let i = 0; i < vechile.length; i += 1) {
     const type = {
       Year: '',
       Property: '',
@@ -78,6 +77,6 @@ rl.on('close', () => {
     // console.log(obj);
   }
   fs.writeFileSync('../json_output/assignment2.json', JSON.stringify(v), (err) => {
-    if (err) console.log('error while writing');
+    if (err) throw err;
   });
 });

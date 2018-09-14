@@ -1,3 +1,5 @@
+const d3;
+
 const margin = {
   top: 0, right: 20, bottom: 20, left: 300,
 };
@@ -56,6 +58,7 @@ function tweenPie(b) {
   const i = d3.interpolate({ startAngle: 0, endAngle: 0 }, b);
   return function (t) { return arc(i(t)); };
 }
+
 //stake-bar starts here
 const margin1 = {
   top: 600, right: 20, bottom: 20, left: 50,

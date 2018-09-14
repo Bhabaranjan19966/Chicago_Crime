@@ -1,9 +1,9 @@
 const fs = require('fs');
 const readline = require('readline');
-const stream = require('stream');
+const Stream = require('stream');
 
 const instream = fs.createReadStream('../Crimes_-_2001_to_present.csv');
-const outstream = new stream();
+const outstream = new Stream();
 outstream.readable = true;
 outstream.writable = true;
 const rl = readline.createInterface({
@@ -41,7 +41,7 @@ rl.on('close', () => {
   }
   fs.writeFileSync('../json_output/assignment3.json', JSON.stringify(v), (err) => {
     if (err) {
-      console.log('error while parsing');
+      throw err;
     }
   });
 });
