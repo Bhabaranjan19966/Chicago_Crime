@@ -1,4 +1,4 @@
-const d3;
+var d3;
 
 const margin = {
   top: 0, right: 20, bottom: 20, left: 300,
@@ -117,6 +117,20 @@ function draw(data, country) {
   // Add the Y Axis
   svg1.append('g')
     .call(d3.axisLeft(y));
+    svg1.append('text')
+     .attr('transform', `translate(${(margin1.bottom+525)},${(margin1.right + (290))})`)
+     .attr('dy', '.35em')
+     .attr('text-anchor', 'start')
+     .style('fill', 'green')
+     .style('font-size', '20px')
+     .text('ROBBERY');
+     svg1.append('text')
+     .attr('transform', `translate(${(margin1.bottom+400)},${(margin1.left -30 )})`)
+     .attr('dy', '.35em')
+     .attr('text-anchor', 'start')
+     .style('fill', 'red')
+     .style('font-size', '20px')
+     .text('BURGLARY');
 }
 // Get the data
 d3.json('../json_output/1st.json', (error, data) => {
